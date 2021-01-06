@@ -4,35 +4,27 @@ HOWTO from [here](https://classicforum.manjaro.org/index.php?topic=16484.0)
 
 On your old machine, do:
 
-1.  Back up the list of currently installed packages from the standard repositories:
+1. Back up the list of currently installed packages from the standard repositories:
 
-        '''bash
-        pacman -Qqen > pkglist-repo.txt
-        '''
+`pacman -Qqen > pkglist-repo.txt`
 
-2.  Back up the list of currently installed packages from the AUR:
+1. Back up the list of currently installed packages from the AUR:
 
-        ```bash
-        pacman -Qqem > pkglist-aur.txt
-        ```
+`pacman -Qqem > pkglist-aur.txt`
 
 On the other/new machine:
 
-1.  Reinstall from list - repository:
+1. Reinstall from list - repository:
 
-        ```bash
-        sudo su
-        ```
+`sudo su`
 
-        ```bash
-        for x in $(cat pkglist-repo.txt); do pacman -S --needed $x; done
-        ```
+    then run:
 
-2.  Reinstall from list - AUR:
+`for x in $(cat pkglist-repo.txt); do pacman -S --needed $x; done`
 
-        '''bash
-        yaourt -S --needed --noconfirm $(< pkglist-aur.txt)
-        '''
+1. Reinstall from list - AUR:
+
+`yaourt -S --needed --noconfirm $(< pkglist-aur.txt)`
 
 > If there are many packages to build, you'll have to re-suppy your password
 > again because sudo will time out. The process will just stall, but not stop.
