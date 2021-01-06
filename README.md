@@ -18,8 +18,6 @@ On the other/new machine:
 
         sudo su
 
-then run:
-
         for x in $(cat pkglist-repo.txt); do pacman -S --needed $x; done
 
 2.  Reinstall from list - AUR:
