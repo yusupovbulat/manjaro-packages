@@ -1,0 +1,3 @@
+nautilus-dropbox
+xmind-2020
+yandex-disk
