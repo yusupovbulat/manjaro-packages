@@ -8,7 +8,7 @@ On your old machine, do:
 
 `pacman -Qqen > pkglist-repo.txt`
 
-1. Back up the list of currently installed packages from the AUR:
+2. Back up the list of currently installed packages from the AUR:
 
 `pacman -Qqem > pkglist-aur.txt`
 
@@ -18,11 +18,11 @@ On the other/new machine:
 
 `sudo su`
 
-    then run:
+then run:
 
 `for x in $(cat pkglist-repo.txt); do pacman -S --needed $x; done`
 
-1. Reinstall from list - AUR:
+2. Reinstall from list - AUR:
 
 `yaourt -S --needed --noconfirm $(< pkglist-aur.txt)`
 
