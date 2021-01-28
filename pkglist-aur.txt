@@ -1,3 +1,10 @@
+jre8
+msodbcsql
+mssql-server
+mssql-tools
 nautilus-dropbox
+tor-browser
+visual-studio-code-bin
 xmind-2020
 yandex-disk
+zoom
